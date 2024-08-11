@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Unlit_MyUnlitShader_PhongLightMode
-  m_Shader: {fileID: 4800000, guid: 61249eddb9470884fa525ff7ce4f5967, type: 3}
+  m_Name: Unlit_BllinnPhongSpecular
+  m_Shader: {fileID: 4800000, guid: aa9454bbaad3563469223cbf7e2d2a20, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -25,7 +25,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _SpecularNum: 6.5
+    - _SpecularNum: 11.3
     m_Colors:
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

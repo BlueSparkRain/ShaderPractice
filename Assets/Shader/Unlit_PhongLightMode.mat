@@ -25,7 +25,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _SpecularNum: 2.2
+    - _SpecularNum: 4.1
     m_Colors:
     - _MainColor: {r: 0, g: 0.38319135, b: 1, a: 1}
     - _SpecularColor: {r: 0.38679236, g: 0.94641095, b: 1, a: 1}

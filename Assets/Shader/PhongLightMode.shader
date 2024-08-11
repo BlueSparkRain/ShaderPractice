@@ -1,10 +1,10 @@
-Shader "Unlit/PhongLightMode"
+Shader "Unlit/MyUnlitShader/PhongLightMode"
 {
     //Phong光照模型=环境光模型+Lambert（漫反射）光照模型 + Phong高光反射光照模型
     Properties
     {
    
-        _MainColor("Color",Color)= (1,1,1,1)
+         _MainColor("Color",Color)= (1,1,1,1)
          _SpecularColor("SpecularColor",COLOR)=(1,1,1,1)
         _SpecularNum("SpecularNum",Range(0,20))=0.5
     }
