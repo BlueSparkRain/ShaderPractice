@@ -1,4 +1,4 @@
-Shader "Unlit/RampCommonLightMode"
+Shader "Unlit/MyUnlitShader/RampCommonLightMode"
 {
    Properties
     {

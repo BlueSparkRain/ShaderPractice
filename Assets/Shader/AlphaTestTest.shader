@@ -1,20 +1,22 @@
-Shader "Unlit/MyUnlitShader/TexBlinnPhongLightMode"
+Shader "Unlit/MyUnlitShader/AlphaTestTest"
 {
+    //透明度测试（针对镂空物体的渲染）
     Properties
     {
         _MainTex ("Texture", 2D) = "white"{}
         _MainColor("MainColor",Color)=(1,1,1,1)
         _SpecularColor("SpecularColor",Color)=(1,1,1,1)
         _SpecularNum("SpecularNum",Range(0,20))=10
+        _CutOff("CutOff",Range(0,1))=0.5
     }
     SubShader
     {
-        Tags { "LightingMode"="ForwardBase" }
+        Tags { "Queue"="AlphaTest" "IgnoreProjector"="True" "RenderType"="TransparentCutout" }
         
 
         Pass
         {
-            
+            Tags {"LightMode"="ForwardBase"}
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -37,6 +39,7 @@ Shader "Unlit/MyUnlitShader/TexBlinnPhongLightMode"
             float4  _SpecularColor;
             float4  _MainColor;
             float _SpecularNum;
+            float _CutOff;
             v2f vert ( appdata_base v)
             {
                 v2f fData;
@@ -49,6 +52,8 @@ Shader "Unlit/MyUnlitShader/TexBlinnPhongLightMode"
 
             fixed4 frag (v2f i) : SV_Target
             {
+                fixed4 texColor=tex2D(_MainTex, i.uv);
+                clip(texColor.a-_CutOff);
                 //漫反射材质颜色
                 float3 albedo=tex2D(_MainTex, i.uv)*_MainColor;
                 //兰伯特光照颜色

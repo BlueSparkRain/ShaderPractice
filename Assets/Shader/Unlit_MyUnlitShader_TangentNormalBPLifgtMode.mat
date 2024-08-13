@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Unlit_TangentNormalBPLifgtMode
+  m_Name: Unlit_MyUnlitShader_TangentNormalBPLifgtMode
   m_Shader: {fileID: 4800000, guid: 75c30527e890443449f04a9e8575a0fa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -33,9 +33,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: 0.58
-    - _SpecularNum: 25.4
+    - _BumpScale: 0.898
+    - _SpecularNum: 27.4
     m_Colors:
-    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 0.840408, g: 0.82075465, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

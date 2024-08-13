@@ -1,4 +1,4 @@
-Shader "Unlit/TangentNormalBPLifgtMode"
+Shader "Unlit/MyUnlitShader/TangentNormalBPLifgtMode"
 {
     Properties
     {
@@ -74,8 +74,8 @@ Shader "Unlit/TangentNormalBPLifgtMode"
                 float3 albedo=tex2D(_MainTex,i.uv.xy)*_MainColor;
                 //Lambert颜色
                 
-                float3 lambertColor=_LightColor0*albedo*(max(0,dot(tangentNormal, normalize(i.lightDir)))*0.5+0.5);
-               // float3 lambertColor=_LightColor0*albedo*max(0,dot(tangentNormal, normalize(i.lightDir)));
+               // float3 lambertColor=_LightColor0*albedo*(max(0,dot(tangentNormal, normalize(i.lightDir)))*0.5+0.5);
+                float3 lambertColor=_LightColor0*albedo*max(0,dot(tangentNormal, normalize(i.lightDir)));
                 //BP高光颜色
                 float3 halfDir=normalize(normalize(i.lightDir)+normalize(i.viewDir)) ;
                 float3 specularColor=_LightColor0*_SpecularColor*pow(max(0,dot(tangentNormal,halfDir)),_SpecularNum);

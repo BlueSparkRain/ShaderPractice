@@ -1,4 +1,4 @@
-Shader "Unlit/SpecularMaskLightMode"
+Shader "Unlit/MyUnlitShader/SpecularMaskLightMode"
 {
    Properties
     {
