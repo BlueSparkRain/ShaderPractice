@@ -1,6 +1,6 @@
 Shader "Unlit/ForwradLightAttenuation"
 {
-    //前向渲染路径中处理点光源和聚光源,支持光照和阴影衰减
+    //前向渲染路径中处理点光源和聚光源,支持光照和（不透明物体的）阴影衰减
      //Phong光照模型=环境光模型+Lambert（漫反射）光照模型 + BlinnPhong高光反射光照模型
     Properties
     {
