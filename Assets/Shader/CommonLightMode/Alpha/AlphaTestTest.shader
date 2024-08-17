@@ -25,7 +25,7 @@ Shader "Unlit/MyUnlitShader/AlphaTestTest"
 
             #include "UnityCG.cginc"
             #include "Lighting.cginc"
-
+        
             
             struct v2f
             {
@@ -33,6 +33,7 @@ Shader "Unlit/MyUnlitShader/AlphaTestTest"
                 float4 vertex : SV_POSITION;
                 float3 worldVertex:TEXCOORD1;
                 float3 worldNormal:NORMAL;
+           
             };
 
             sampler2D _MainTex;
@@ -48,6 +49,7 @@ Shader "Unlit/MyUnlitShader/AlphaTestTest"
                 fData.uv=v.texcoord.xy*_MainTex_ST.xy+_MainTex_ST.zw;
                 fData.worldNormal=UnityObjectToWorldNormal(v.normal);
                 fData.worldVertex=mul(UNITY_MATRIX_M,v.vertex);
+              
                 return fData;
             }
 

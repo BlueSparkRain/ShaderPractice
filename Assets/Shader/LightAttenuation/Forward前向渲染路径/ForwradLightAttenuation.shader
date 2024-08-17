@@ -28,11 +28,10 @@ Shader "Unlit/ForwradLightAttenuation"
             struct v2f
             {
                float4 pos : SV_POSITION;
-              
                float3 worldNormal:NORMAL;
                float4 wPos:TEXCOORD0;
                //阴影坐标宏，主要用于储存阴影纹理坐标
-               SHADOW_COORDS(2)//2表示下一个可用的差值寄存器的索引值
+               SHADOW_COORDS(1)//1表示下一个可用的差值寄存器的索引值,前面有几个texcoord就填几
             };
              
             fixed4 _MainColor;
