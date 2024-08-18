@@ -1,4 +1,4 @@
-Shader "Unlit/AlphaTestShadow"
+Shader "Unlit/MyUnlitShader/AlphaTestShadow"
 {
      //透明度测试（针对镂空物体的渲染）
     Properties

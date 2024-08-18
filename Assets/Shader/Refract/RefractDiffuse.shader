@@ -1,12 +1,16 @@
-Shader "Unlit/MyUnlitShader/Reflect/ReflectionDiffuse"
+Shader "Unlit/MyUnlitShader/Refract/RefractDiffuse"
 {
     Properties
     {
+        //漫反射颜色
       _Color("Color",Color)=(1,1,1,1)
-      _ReflectColor("ReflectColor",Color)=(1,1,1,1)
+      //折射颜色
+      _RefractColor("RefractColor",Color)=(1,1,1,1)
       _CubeMap("CubMap",Cube)=""{}
-      _Reflectivity("Reflectivity",Range(0,1))=0.5
-     
+      //介质1折射率/介质2折射率
+      _RefractRation("efractRation",Range(0.1,1))=0.5
+      //折射强度
+      _RefractIntensity("RefractIntensity",Range(0,1))=1
     }
     SubShader
     {
@@ -22,17 +26,19 @@ Shader "Unlit/MyUnlitShader/Reflect/ReflectionDiffuse"
             #include "UnityCG.cginc"
             #include  "Lighting.cginc"
             #include  "AutoLight.cginc"
+            
             samplerCUBE _CubeMap;
-            float _Reflectivity;
             fixed4 _Color;
-            fixed4 _ReflectColor;
+            fixed4 _RefractColor;
+            float _RefractRation;
+            float _RefractIntensity;
 
             struct v2f
             {
                 float4 pos : SV_POSITION;
                 float3 wPos:TEXCOORD0;
                 float3 wNormal:NORMAL;
-                float3 wRef:TEXCOORD1;
+                float3 wRefrac:TEXCOORD1;
                 SHADOW_COORDS(2)
             };
 
@@ -43,7 +49,7 @@ Shader "Unlit/MyUnlitShader/Reflect/ReflectionDiffuse"
                 o.wPos=mul(UNITY_MATRIX_M,v.vertex);
                 o.wNormal=UnityObjectToWorldNormal(v.normal);
                 fixed3 wViewDir=UnityWorldSpaceViewDir(o.wPos);
-                o.wRef=reflect(-wViewDir,o.wNormal);
+                o.wRefrac=refract(- normalize(wViewDir),o.wNormal,_RefractRation);
                 TRANSFER_SHADOW(o)
                 return o;
             }
@@ -51,10 +57,11 @@ Shader "Unlit/MyUnlitShader/Reflect/ReflectionDiffuse"
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed3  wLightDir=normalize(UnityWorldSpaceLightDir(i.wPos));
-                fixed3 lambertColor=_Color*_LightColor0*max(0,dot( normalize(i.wNormal),wLightDir));
+                fixed3 diffuseColor=_Color*_LightColor0*max(0,dot( normalize(i.wNormal),wLightDir));
                 //对立方体纹理进行采样
-                fixed3 cubecolor=texCUBE(_CubeMap,i.wRef).xyz;
-                float3 color=UNITY_LIGHTMODEL_AMBIENT+lerp(lambertColor,cubecolor,_Reflectivity);
+                fixed3 cubecolor=texCUBE(_CubeMap,i.wRefrac).xyz*_RefractColor;
+                UNITY_LIGHT_ATTENUATION(atten,i,i.wPos);
+                float3 color=UNITY_LIGHTMODEL_AMBIENT+lerp(diffuseColor,cubecolor,_RefractIntensity)*atten;
                 return fixed4(color,1);
             }
             ENDCG

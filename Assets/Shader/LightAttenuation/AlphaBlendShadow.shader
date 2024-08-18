@@ -1,4 +1,4 @@
-Shader "Unlit/AlphaBlendShadow"
+Shader "Unlit/MyUnlitShader/AlphaBlendShadow"
 {
   //Unity不会为透明混合shader直接处理阴影
      Properties
