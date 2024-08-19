@@ -24,19 +24,21 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5aa7e575da36ebd4dbe7b7b9ef438909, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CubeMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 8900000, guid: fc6219c2f978ba74fb60ed7aac014641, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 48d5ef07131024141a1163016c100aff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _RefractAmounnt: 1
+    - _Distortion: 0.28
+    - _RefractAmounnt: 0.28
+    - _RefractAmount: 0.622
     m_Colors: []
   m_BuildTextureStacks: []
