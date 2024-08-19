@@ -1,4 +1,4 @@
-Shader "Unlit/Glass"
+Shader "Unlit/GlassBase"
 {
       Properties
     {
