@@ -18,6 +18,7 @@ Shader "Unlit/GlassBase"
         {}
         Pass
         {
+            Cull Off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag

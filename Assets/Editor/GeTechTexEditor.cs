@@ -15,9 +15,9 @@ public class GeTechTexEditor :Editor
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
-        if (GUILayout.Button("更新程序纹理"))
+        if (GUILayout.Button("更新方格程序纹理"))
         {
-            targetComponent.CreatTechTex();
+            targetComponent.CreatRectTechTex();
         }
     }
 }

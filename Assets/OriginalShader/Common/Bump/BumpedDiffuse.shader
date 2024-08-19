@@ -14,6 +14,7 @@ Shader "Unlit/BumpedDiffuse"
         Pass
         {
             Tags { "LightMode"="ForwardBase" }
+         
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag

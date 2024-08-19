@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+//通过C# 动态生成程序纹理
 public class GeTechTex : MonoBehaviour
 {
     public int tileWidth=256;
@@ -15,10 +16,10 @@ public class GeTechTex : MonoBehaviour
 
     private void Start()
     {
-        CreatTechTex();
+        CreatRectTechTex();
     }
 
-    public void CreatTechTex()
+    public void CreatRectTechTex()
     {
         Texture2D texture = new Texture2D(tileWidth, tileHeight);
         for (int y = 0; y < tileHeight; y++)
