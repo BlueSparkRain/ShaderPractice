@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7216234550964991637
+--- !u!1 &7404295806424560417
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5442807184074758468}
-  - component: {fileID: 4496938423640933229}
-  - component: {fileID: 3100967483369838371}
-  - component: {fileID: 7381994402270600260}
+  - component: {fileID: 5064076504315174930}
+  - component: {fileID: 8036946868026744563}
+  - component: {fileID: 3810837383732526550}
+  - component: {fileID: 4810851771200274719}
   m_Layer: 0
   m_Name: Plane (1)
   m_TagString: Untagged
@@ -19,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5442807184074758468
+--- !u!4 &5064076504315174930
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7216234550964991637}
+  m_GameObject: {fileID: 7404295806424560417}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5433174377789614504}
+  m_Father: {fileID: 5528947773691500511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4496938423640933229
+--- !u!33 &8036946868026744563
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7216234550964991637}
+  m_GameObject: {fileID: 7404295806424560417}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3100967483369838371
+--- !u!23 &3810837383732526550
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7216234550964991637}
+  m_GameObject: {fileID: 7404295806424560417}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7381994402270600260
+--- !u!64 &4810851771200274719
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7216234550964991637}
+  m_GameObject: {fileID: 7404295806424560417}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,7 +106,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &5542869227949133379
+--- !u!1001 &5417968656622350388
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -128,19 +128,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.72
+      value: -1.823506
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.21
+      value: 1.6399999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.92
+      value: -4.3489523
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.01805544
+      value: 0.0197683
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99983704
+      value: 0.99980456
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalRotation.z
@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 177.931
+      value: 177.735
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -172,18 +172,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       propertyPath: m_Name
-      value: Higokumaru
+      value: Higokumaru (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5442807184074758468}
+      addedObject: {fileID: 5064076504315174930}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
---- !u!4 &5433174377789614504 stripped
+--- !u!4 &5528947773691500511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3311166f52d4b6f49ace8b356032f9d8, type: 3}
-  m_PrefabInstance: {fileID: 5542869227949133379}
+  m_PrefabInstance: {fileID: 5417968656622350388}
   m_PrefabAsset: {fileID: 0}
