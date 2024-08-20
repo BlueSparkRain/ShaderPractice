@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Disturb
-  m_Shader: {fileID: 4800000, guid: 3f692841c2c755b479b22c26b7d6abac, type: 3}
+  m_Name: FresnelRim
+  m_Shader: {fileID: 4800000, guid: 6573c981fcc5879469fd335904c0ead7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,17 +23,23 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 87245f5aaf411b244a77dfc67ef3db74, type: 3}
-        m_Scale: {x: 1, y: 1}
+    - _5:
+        m_Texture: {fileID: 2800000, guid: 13c9cae8f6a2bbf4692fa86953dc9947, type: 3}
+        m_Scale: {x: 8, y: 6}
         m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: aeca9810d485baf4490fc74b8d6c87ce, type: 3}
-        m_Scale: {x: 2, y: 2}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: ee70cde3d43582b4dab7e5971720b403, type: 3}
+        m_Scale: {x: 6, y: 6}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: ee70cde3d43582b4dab7e5971720b403, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NoiseIntensity: 0.07103197
+    - _RimPower: 3.28
+    - _RimScale: 0.97
     m_Colors:
-    - _NoiseSpeed: {r: 0.5, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 0.7369002, g: 2.6838138, b: 4.594794, a: 0}
+    - _TexSpeed: {r: 0, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

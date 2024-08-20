@@ -28,17 +28,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
-        m_Texture: {fileID: 2800000, guid: aeca9810d485baf4490fc74b8d6c87ce, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: ee70cde3d43582b4dab7e5971720b403, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissloveSlider: 0.09
+    - _DissloveSlider: 0.36
     - _MaskNoiseScale: 1.6
-    - _RimWidth: 0.04
+    - _RimWidth: 0.219
     m_Colors:
     - _Color0: {r: 0.91329306, g: 0.8295298, b: 1.741101, a: 0}
+    - _MainColor: {r: 4.450156, g: 1.553356, b: 1.930088, a: 0}
     - _RimColor: {r: 9.647334, g: 1.8505876, b: 2.492763, a: 0}
     - _Vector0: {r: 0, g: 0, b: 0, a: 0}
-    - _Vector1: {r: 0.3, g: 0.2, b: 0, a: 0}
+    - _Vector1: {r: 0, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
