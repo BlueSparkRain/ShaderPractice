@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mask
-  m_Shader: {fileID: 4800000, guid: 359190d4b85827e4fae43edb5bf37de3, type: 3}
+  m_Name: Disturb
+  m_Shader: {fileID: 4800000, guid: 3f692841c2c755b479b22c26b7d6abac, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -19,26 +19,21 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: :m_EnableInstancingVariants
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _TextureSample0:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 87245f5aaf411b244a77dfc67ef3db74, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TextureSample1:
+    - _NoiseTex:
         m_Texture: {fileID: 2800000, guid: aeca9810d485baf4490fc74b8d6c87ce, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissloveSlider: 0.09
-    - _MaskNoiseScale: 1.6
-    - _RimWidth: 0.04
+    - _NoiseIntensity: 0.07103197
     m_Colors:
-    - _Color0: {r: 0.91329306, g: 0.8295298, b: 1.741101, a: 0}
-    - _RimColor: {r: 9.647334, g: 1.8505876, b: 2.492763, a: 0}
-    - _Vector0: {r: 0, g: 0, b: 0, a: 0}
-    - _Vector1: {r: 0.3, g: 0.2, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
