@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: aeca9810d485baf4490fc74b8d6c87ce, type: 3}
-        m_Scale: {x: 3.4, y: 3.9}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
@@ -40,5 +40,5 @@ Material:
     - _Color0: {r: 0.91329306, g: 0.8295298, b: 1.741101, a: 0}
     - _RimColor: {r: 17.148375, g: 3.289465, b: 12.272295, a: 0}
     - _Vector0: {r: 0, g: 0, b: 0, a: 0}
-    - _Vector1: {r: 0.46, g: 0.71, b: 0, a: 0}
+    - _Vector1: {r: 0.3, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
