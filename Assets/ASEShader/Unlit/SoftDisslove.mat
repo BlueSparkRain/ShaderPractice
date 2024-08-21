@@ -39,5 +39,6 @@ Material:
     m_Floats:
     - _DepthDistance: 1.29
     m_Colors:
-    - _Color: {r: 2.297397, g: 2.297397, b: 2.297397, a: 1}
+    - _Color: {r: 15.813396, g: 15.813396, b: 15.813396, a: 1}
+    - _MainColor: {r: 0.5967922, g: 0.8327794, b: 1.7411011, a: 1}
   m_BuildTextureStacks: []

@@ -1119,7 +1119,7 @@ ParticleSystem:
         m_RotationOrder: 4
   ShapeModule:
     serializedVersion: 6
-    enabled: 1
+    enabled: 0
     type: 4
     angle: 18.98
     length: 5
@@ -4721,40 +4721,22 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
+          time: 0.020122528
+          value: 0.0000076293945
+          inSlope: 1.0018543
+          outSlope: 1.0018543
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.27645645
         - serializedVersion: 3
-          time: 0.23739615
-          value: 0.20983934
-          inSlope: -0.025739891
-          outSlope: -0.025739891
+          time: 0.9517103
+          value: 0.97341424
+          inSlope: 1.0285726
+          outSlope: 1.0285726
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.37115794
-        - serializedVersion: 3
-          time: 0.5931503
-          value: -0.13112631
-          inSlope: -0.026734175
-          outSlope: -0.026734175
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.6300575
-        - serializedVersion: 3
-          time: 0.92276675
-          value: 0.047618866
-          inSlope: 0.8138477
-          outSlope: 0.8138477
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.30630162
+          inWeight: 0.39524913
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -6303,7 +6285,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -7512,7 +7494,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 64893
+        atime1: 64507
         atime2: 64250
         atime3: 0
         atime4: 0
