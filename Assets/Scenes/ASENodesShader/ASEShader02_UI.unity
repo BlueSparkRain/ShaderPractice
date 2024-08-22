@@ -1119,6 +1119,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 656189892}
     m_Modifications:
+    - target: {fileID: 2117911326831438178, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: eb0f38bfe5e396a49bcb3fc3e1b4004d, type: 2}
+    - target: {fileID: 2956361650786969020, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_Spacing.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956361650786969020, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_CellSize.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956361650786969020, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_CellSize.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 3672001090488475046, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
       propertyPath: m_Name
       value: UIPanel
@@ -1146,6 +1162,22 @@ PrefabInstance:
     - target: {fileID: 3921276067949481752, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433735695450070092, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 734.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433735695450070092, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 676
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433735695450070092, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -233.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433735695450070092, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00097942
       objectReference: {fileID: 0}
     - target: {fileID: 5048980191215136056, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1251,6 +1283,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5512081811814582510, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 62283f80247edcd4fa6d2e07c643f28c, type: 2}
     - target: {fileID: 7987873109033283020, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
       propertyPath: m_Material
       value: 
