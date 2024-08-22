@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ASENodesShader/ASEShader01.unity
+    path: Assets/Scenes/ASENodesShader/ASEShader01_Common.unity
     guid: 1feb1decd8003a04bac49f2b930396c7
   m_configObjects: {}
