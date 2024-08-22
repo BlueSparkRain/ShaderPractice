@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ramp
+  m_Shader: {fileID: 4800000, guid: 0e03010f42c59464baa6004f61bfd31e, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MaskTex:
+        m_Texture: {fileID: 2800000, guid: 18e8b50daeba60c4eb9aba804ef88e32, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampTex:
+        m_Texture: {fileID: 2800000, guid: 48ec96fabffd78947a48ca11707cdfaf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _DepyhDistance: 0.73
+    - _Float0: 0.57
+    - _Float1: 2.33
+    - _RampSlider: 0
+    m_Colors:
+    - _MainColor: {r: 7.37721, g: 7.37721, b: 7.37721, a: 0}
+    - _MaskColor: {r: 2.8284268, g: 2.2858667, b: 2.2858667, a: 0}
+    - _MaskSpeed: {r: 0, g: 0.5, b: 0, a: 0}
+    - _ScreenTilling: {r: 10, g: 4, b: 0, a: 0}
+  m_BuildTextureStacks: []
