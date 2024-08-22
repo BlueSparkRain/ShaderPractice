@@ -34,5 +34,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _HueSlider: 0
-    m_Colors: []
+    - _TimeScale: 0.44
+    m_Colors:
+    - _MainColor: {r: 4.541206, g: 4.541206, b: 4.541206, a: 0}
   m_BuildTextureStacks: []
