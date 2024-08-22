@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: ad978111eb291654f989b7ae8f1b450d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _New_Sword_lp_UV_BaseColor: {fileID: 2800000, guid: 2ab69ed32a00e264da8b2df945af2346, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -45,13 +45,14 @@ Material:
     - _ColorSlider: 1
     - _Float0: 1
     - _Float1: 0.51
-    - _LengthScale: 0.93
+    - _LengthScale: 2.8
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RidialScale: 0.01
+    - _RidialScale: 0.02
     m_Colors:
     - _Color0: {r: 1.1955405, g: 4.68344, b: 5.5098863, a: 0}
-    - _Color1: {r: 1, g: 0.3553871, b: 0, a: 0}
+    - _Color1: {r: 0, g: 0.08859295, b: 0.28627452, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _LineRotSpeed: {r: 0.1, g: 0, b: 0, a: 0}
+    - _Vector0: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

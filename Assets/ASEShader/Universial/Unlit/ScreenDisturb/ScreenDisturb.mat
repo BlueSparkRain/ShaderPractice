@@ -46,12 +46,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _NoiseIntensity: 0.3
+    - _NoiseIntensity: 0.02
     - _NoramlScale: 0.982843
     - _QueueControl: 0
     - _QueueOffset: -11
     m_Colors:
-    - _Color0: {r: 1.7411011, g: 1.7411011, b: 1.7411011, a: 0}
+    - _Color0: {r: 3.5833614, g: 1.1381112, b: 1.1381112, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseSpeed: {r: 0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
