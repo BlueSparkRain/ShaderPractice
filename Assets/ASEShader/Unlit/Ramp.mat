@@ -33,10 +33,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DepyhDistance: 0.73
+    - _DepyhDistance: 0.59
     - _Float0: 0.57
     - _Float1: 2.33
-    - _RampSlider: 0
+    - _RampSlider: 0.05
     m_Colors:
     - _MainColor: {r: 7.37721, g: 7.37721, b: 7.37721, a: 0}
     - _MaskColor: {r: 2.8284268, g: 2.2858667, b: 2.2858667, a: 0}

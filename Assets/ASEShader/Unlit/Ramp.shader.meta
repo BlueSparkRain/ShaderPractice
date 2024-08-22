@@ -4,6 +4,7 @@ ShaderImporter:
   externalObjects: {}
   defaultTextures:
   - _MaskTex: {fileID: 2800000, guid: 18e8b50daeba60c4eb9aba804ef88e32, type: 3}
+  - _RampTex: {fileID: 2800000, guid: 48ec96fabffd78947a48ca11707cdfaf, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 
