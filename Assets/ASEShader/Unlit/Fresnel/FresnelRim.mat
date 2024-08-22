@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FresnelRim
+  m_Shader: {fileID: 4800000, guid: 6573c981fcc5879469fd335904c0ead7, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _5:
+        m_Texture: {fileID: 2800000, guid: 18e8b50daeba60c4eb9aba804ef88e32, type: 3}
+        m_Scale: {x: 4.48, y: 4.49}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: ee70cde3d43582b4dab7e5971720b403, type: 3}
+        m_Scale: {x: 6, y: 6}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: ee70cde3d43582b4dab7e5971720b403, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _RimPower: 3.28
+    - _RimScale: 1.69
+    m_Colors:
+    - _RimColor: {r: 1.7932999, g: 6.531255, b: 11.181763, a: 0}
+    - _TexSpeed: {r: 0, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
