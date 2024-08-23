@@ -54,7 +54,7 @@ Material:
     - _AddTexTilling: {r: 1, g: 1, b: 0, a: 0}
     - _BackColor: {r: 0.5729197, g: 0.8072484, b: 3.5723267, a: 0}
     - _BackTexSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
-    - _MainColor: {r: 2.8284268, g: 0.17770222, b: 0.36046255, a: 1}
+    - _MainColor: {r: 4.8353405, g: 0.7754784, b: 1.0703285, a: 1}
     - _NoiseTexSpeed: {r: 0, g: 0.2, b: 0, a: 0}
     - _NoiseTexTilling: {r: 1, g: 1, b: 0, a: 0}
     - _ScreenTilling: {r: 1, g: 1, b: 0, a: 0}
