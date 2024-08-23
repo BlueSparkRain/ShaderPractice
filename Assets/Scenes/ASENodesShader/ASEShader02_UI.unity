@@ -1139,6 +1139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3672001090488475046, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3921276067949481752, guid: 5c17af38eecca1e44b1aea4da063ba20, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
