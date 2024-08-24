@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SwordDisslove
+  m_Shader: {fileID: 4800000, guid: 50b570c88cf396c4483fb9759d078241, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DissloveTex:
+        m_Texture: {fileID: 2800000, guid: 351070468ddb3244395356271f1e40b4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionTex:
+        m_Texture: {fileID: 2800000, guid: b4671b56a70b9ad44b9481142abae20d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: ee70cde3d43582b4dab7e5971720b403, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _lambert1_Base_Color:
+        m_Texture: {fileID: 2800000, guid: ce5a4ae887ea1034d8150683435168db, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _lambert1_Metallic:
+        m_Texture: {fileID: 2800000, guid: 8e781e44869684542a2f81be6c538192, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _lambert1_Normal_DirectX:
+        m_Texture: {fileID: 2800000, guid: 1e5accce292e39c4b862c71ae2a7ca23, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _lambert1_Roughness:
+        m_Texture: {fileID: 2800000, guid: cb311e8b07c615945972c4fdc54a5e3d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _DissloveRimWidth: 0.0818534
+    - _DissloveSlider: 0.3268124
+    - _Float0: -0.1134397
+    - _Float3: 0
+    - _Float4: 1
+    - __dirty: 0
+    m_Colors:
+    - _Color0: {r: 1, g: 0.9431549, b: 0.361635, a: 0}
+    - _EmissionTexColor: {r: 2.143547, g: 2.143547, b: 2.143547, a: 0}
+    - _ScanColor: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
