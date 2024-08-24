@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SwordDisslove
-  m_Shader: {fileID: 4800000, guid: 50b570c88cf396c4483fb9759d078241, type: 3}
+  m_Name: SwordEffect
+  m_Shader: {fileID: 4800000, guid: 7863ddb95273f2e4e8dae87add60f361, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -55,20 +55,34 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _texcoord3:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _DissloveRimWidth: 0.0818534
     - _DissloveSlider: 0.3268124
-    - _Float0: -0.1134397
+    - _EnvironmentReflections: 1
     - _Float3: 0
     - _Float4: 1
-    - __dirty: 0
+    - _Height: -0.1134397
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SpecularHighlights: 1
     m_Colors:
     - _Color0: {r: 1, g: 0.9431549, b: 0.361635, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionTexColor: {r: 2.143547, g: 2.143547, b: 2.143547, a: 0}
     - _ScanColor: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
