@@ -24,8 +24,16 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _HorizontalColorRamp:
-        m_Texture: {fileID: 2800000, guid: 48ec96fabffd78947a48ca11707cdfaf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5f6ec54a821902545a03eb0261d83602, type: 3}
         m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal1:
+        m_Texture: {fileID: 2800000, guid: d25a58e34cbc74b4eae7277b35f63fa8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal2:
+        m_Texture: {fileID: 2800000, guid: d25a58e34cbc74b4eae7277b35f63fa8, type: 3}
+        m_Scale: {x: 0.3, y: 0.3}
         m_Offset: {x: 0, y: 0}
     - _RefracNoiseTex:
         m_Texture: {fileID: 2800000, guid: aeca9810d485baf4490fc74b8d6c87ce, type: 3}
@@ -43,22 +51,45 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
+    - _EnvironmentReflections: 1
     - _FeacSpeed: 0.04
-    - _Float0: 6.7
+    - _Float0: 3.9
     - _HorizontalDistance: 0.45
-    - _MaskHardness: 0.718
-    - _MaskRadius: 0.85
+    - _MaskHardness: 0.588
+    - _MaskRadius: 0.59
     - _NoiseIntensity: 0.02
-    - _PosterPower: 50
+    - _NormalStrength: 0.28
+    - _PosterPower: 31.4
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _RefracScale: 2.11
+    - _SpecularHighlights: 1
     - _WaveNoiseIntensity: 0.106
+    - __dirty: 1
     m_Colors:
-    - _DeepColor: {r: 0, g: 0.77591014, b: 1.1353015, a: 0.7019608}
+    - _DeepColor: {r: 0, g: 0.8912867, b: 1.3041189, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Normal1Speed: {r: 0.01, g: 0.03, b: 0, a: 0}
+    - _Normal2Speed: {r: 0.03, g: 0.02, b: 0, a: 0}
     - _PoolCenterPos: {r: 0.42, g: 0.29, b: 0, a: 0}
-    - _UpColor: {r: 0.27969065, g: 0.2875929, b: 0.4061262, a: 1}
-    - _WaveColor: {r: 0.9889481, g: 0.88075805, b: 21.544792, a: 0}
+    - _UpColor: {r: 0.1889996, g: 0.25873375, b: 1.39772, a: 1}
+    - _WaveColor: {r: 0.32433817, g: 0.3327887, b: 6.8831806, a: 0.0627451}
     - _WaveNoiseSpeed: {r: 0.06, g: 0.03, b: 0, a: 0}
     - _WaveSpeed: {r: 0.02, g: 0.02, b: 0, a: 0}
   m_BuildTextureStacks: []
