@@ -5,6 +5,8 @@ ShaderImporter:
   defaultTextures:
   - _RefracNoiseTex: {fileID: 2800000, guid: 351070468ddb3244395356271f1e40b4, type: 3}
   - _HorizontalColorRamp: {fileID: 2800000, guid: 48ec96fabffd78947a48ca11707cdfaf, type: 3}
+  - _WaveTex: {fileID: 2800000, guid: dd7dfb44d46e66d4a9db7b6c1b5c2d01, type: 3}
+  - _WaveNoiseTex: {fileID: 2800000, guid: 351070468ddb3244395356271f1e40b4, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 
