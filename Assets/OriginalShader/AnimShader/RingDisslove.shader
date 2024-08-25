@@ -7,15 +7,18 @@ Shader "Unlit/RingDisslove"
         _TexSpeed("TexSpeed",vector)=(0,0,0,0)
         _CullOut("CullOut",Range(0,1))=0.5
         _MainColor("MainColor",COLOR)=(1,1,1,1)
+        _ColorIntensity("ColorIntensity",Range(0,4))=1
 
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
-        LOD 100
-
+           Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+       
+      
         Pass
         {
+            ZWrite Off
+            Blend SrcAlpha OneMinusSrcAlpha
             Cull Off
             CGPROGRAM
             #pragma vertex vert
@@ -44,6 +47,7 @@ Shader "Unlit/RingDisslove"
             float4 _TexSpeed;
             float  _CullOut;
             float4 _MainColor;
+            float  _ColorIntensity;
             v2f vert (appdata v)
             {
                 v2f o;
@@ -58,9 +62,9 @@ Shader "Unlit/RingDisslove"
            
                 half grandient=tex2D(_MainTex,i.uv+_Time.y*_TexSpeed.xy).r;
                 float noise= tex2D(_NoiseTex,i.uv+_Time.y*_TexSpeed.zw).r;
-                clip( grandient-_CullOut-noise);
-              
-                return _MainColor;
+               clip(grandient-_CullOut-noise);
+          
+                return _MainColor* _ColorIntensity;
             }
             ENDCG
         }
