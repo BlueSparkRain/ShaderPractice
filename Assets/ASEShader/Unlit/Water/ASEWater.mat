@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal1:
-        m_Texture: {fileID: 2800000, guid: d25a58e34cbc74b4eae7277b35f63fa8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 98985d64e5aa13848952242d8a84bf06, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal2:
@@ -73,7 +73,7 @@ Material:
     - _MaskHardness: 0.588
     - _MaskRadius: 0.59
     - _NoiseIntensity: 0.02
-    - _NormalStrength: 0.28
+    - _NormalStrength: 0.098
     - _PosterPower: 31.4
     - _QueueControl: 0
     - _QueueOffset: 0
