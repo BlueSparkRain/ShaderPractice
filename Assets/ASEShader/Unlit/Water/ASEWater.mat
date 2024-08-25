@@ -91,5 +91,5 @@ Material:
     - _UpColor: {r: 0.1889996, g: 0.25873375, b: 1.39772, a: 1}
     - _WaveColor: {r: 0.32433817, g: 0.3327887, b: 6.8831806, a: 0.0627451}
     - _WaveNoiseSpeed: {r: 0.06, g: 0.03, b: 0, a: 0}
-    - _WaveSpeed: {r: 0.02, g: 0.02, b: 0, a: 0}
+    - _WaveSpeed: {r: 0.04, g: 0.04, b: 0, a: 0}
   m_BuildTextureStacks: []
