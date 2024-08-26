@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlbedoTex:
-        m_Texture: {fileID: 2800000, guid: 812d4dd5fe95b6c4a9610d75f22c7f7b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f603f5e370061547b59a01c6dbf75f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -55,7 +55,7 @@ Material:
     m_Floats:
     - _AddNormalScale: 0.24
     - _AlphaCutoff: 0.5
-    - _Clip: 0
+    - _Clip: 0.77
     - _Cutoff: 0.5
     - _EnvironmentReflections: 1
     - _Float1: -29.86
@@ -65,6 +65,7 @@ Material:
     - _SmMax: 0.81
     - _SmMin: 0
     - _SpecularHighlights: 1
+    - _TransSpeedRate: 1
     - _VertexWidth: 0.1
     - __dirty: 0
     m_Colors:
@@ -72,5 +73,5 @@ Material:
     - _MainColor: {r: 1.1694394, g: 4.423223, b: 0.9875746, a: 0}
     - _MainColor1: {r: 18.164822, g: 17.214643, b: 0, a: 0}
     - _MainColor2: {r: 0.7338587, g: 6.567773, b: 7.37721, a: 0}
-    - _MainLit: {r: 3.482202, g: 3.482202, b: 3.482202, a: 0}
+    - _MainLit: {r: 0.4941688, g: 0.4941688, b: 0.4941688, a: 0}
   m_BuildTextureStacks: []
