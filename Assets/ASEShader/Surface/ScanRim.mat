@@ -23,6 +23,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 0a0e8af2869fa45f78e25460db578482, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 351070468ddb3244395356271f1e40b4, type: 3}
+        m_Scale: {x: 1.97, y: 1.7}
+        m_Offset: {x: 0, y: 0}
+    - _ScanTex:
+        m_Texture: {fileID: 2800000, guid: d50d4704bacac2344a7c57f9bb00661a, type: 3}
+        m_Scale: {x: 0.54, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -39,13 +55,21 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _EnvironmentReflections: 1
+    - _MainTexBase: 3.53
+    - _NoiseIntensity: 0.126
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimBase: 0.5144737
-    - _RimMax: 1.515853
-    - _RimMin: 0.5325254
+    - _RimBase: 0.349
+    - _RimMax: 1.15
+    - _RimMin: 0.116
+    - _ScanTilling: 0.39
     - _SpecularHighlights: 1
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _InnerColor: {r: 0, g: 0.1511481, b: 22.363522, a: 0}
+    - _RimColor: {r: 1.1708878, g: 0.67583627, b: 0, a: 0}
+    - _ScanColor: {r: 22.363522, g: 2.8256855, b: 0, a: 0.8509804}
+    - _ScanSpeed: {r: 0, g: 0.5, b: 0, a: 0}
+    - _ScanSpeed1: {r: 0.5, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

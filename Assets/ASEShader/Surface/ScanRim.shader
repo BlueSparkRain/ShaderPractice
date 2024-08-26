@@ -569,12 +569,12 @@ Shader "ScanRim"
 				WorldViewDirection = SafeNormalize( WorldViewDirection );
 
 				float2 uv_MainTex = IN.ase_texcoord8.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float dotResult14 = dot( WorldNormal , WorldViewDirection );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float4 lerpResult24 = lerp( _InnerColor , _RimColor , temp_output_27_0);
 				float2 appendResult33 = (float2(WorldPosition.x , WorldPosition.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
@@ -594,7 +594,7 @@ Shader "ScanRim"
 				float Metallic = 0;
 				float Smoothness = 0.5;
 				float Occlusion = 1;
-				float Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				float Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				float AlphaClipThreshold = 0.5;
 				float AlphaClipThresholdShadow = 0.5;
 				float3 BakedGI = 0;
@@ -1130,15 +1130,15 @@ Shader "ScanRim"
 				#endif
 
 				float2 uv_MainTex = IN.ase_texcoord2.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float3 ase_worldNormal = IN.ase_texcoord3.xyz;
 				float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - WorldPosition );
 				ase_worldViewDir = normalize(ase_worldViewDir);
 				float dotResult14 = dot( ase_worldNormal , ase_worldViewDir );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float2 appendResult33 = (float2(WorldPosition.x , WorldPosition.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
 				float2 appendResult32 = (float2(objToWorld31.x , objToWorld31.y));
@@ -1150,7 +1150,7 @@ Shader "ScanRim"
 				float4 tex2DNode28 = tex2D( _ScanTex, lerpResult42 );
 				
 
-				float Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				float Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				float AlphaClipThreshold = 0.5;
 				float AlphaClipThresholdShadow = 0.5;
 
@@ -1462,15 +1462,15 @@ Shader "ScanRim"
 				#endif
 
 				float2 uv_MainTex = IN.ase_texcoord2.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float3 ase_worldNormal = IN.ase_texcoord3.xyz;
 				float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - WorldPosition );
 				ase_worldViewDir = normalize(ase_worldViewDir);
 				float dotResult14 = dot( ase_worldNormal , ase_worldViewDir );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float2 appendResult33 = (float2(WorldPosition.x , WorldPosition.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
 				float2 appendResult32 = (float2(objToWorld31.x , objToWorld31.y));
@@ -1482,7 +1482,7 @@ Shader "ScanRim"
 				float4 tex2DNode28 = tex2D( _ScanTex, lerpResult42 );
 				
 
-				float Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				float Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				float AlphaClipThreshold = 0.5;
 				#ifdef ASE_DEPTH_WRITE_ON
 					float DepthValue = 0;
@@ -1799,15 +1799,15 @@ Shader "ScanRim"
 				#endif
 
 				float2 uv_MainTex = IN.ase_texcoord4.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float3 ase_worldNormal = IN.ase_texcoord5.xyz;
 				float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - WorldPosition );
 				ase_worldViewDir = normalize(ase_worldViewDir);
 				float dotResult14 = dot( ase_worldNormal , ase_worldViewDir );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float4 lerpResult24 = lerp( _InnerColor , _RimColor , temp_output_27_0);
 				float2 appendResult33 = (float2(WorldPosition.x , WorldPosition.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
@@ -1822,7 +1822,7 @@ Shader "ScanRim"
 
 				float3 BaseColor = float3(0.5, 0.5, 0.5);
 				float3 Emission = ( lerpResult24 + ( tex2DNode28 * _ScanColor ) ).rgb;
-				float Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				float Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				float AlphaClipThreshold = 0.5;
 
 				#ifdef _ALPHATEST_ON
@@ -2115,15 +2115,15 @@ Shader "ScanRim"
 				#endif
 
 				float2 uv_MainTex = IN.ase_texcoord2.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float3 ase_worldNormal = IN.ase_texcoord3.xyz;
 				float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - WorldPosition );
 				ase_worldViewDir = normalize(ase_worldViewDir);
 				float dotResult14 = dot( ase_worldNormal , ase_worldViewDir );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float2 appendResult33 = (float2(WorldPosition.x , WorldPosition.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
 				float2 appendResult32 = (float2(objToWorld31.x , objToWorld31.y));
@@ -2136,7 +2136,7 @@ Shader "ScanRim"
 				
 
 				float3 BaseColor = float3(0.5, 0.5, 0.5);
-				float Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				float Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				float AlphaClipThreshold = 0.5;
 
 				half4 color = half4(BaseColor, Alpha );
@@ -2447,14 +2447,14 @@ Shader "ScanRim"
 				#endif
 
 				float2 uv_MainTex = IN.ase_texcoord4.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - WorldPosition );
 				ase_worldViewDir = normalize(ase_worldViewDir);
 				float dotResult14 = dot( WorldNormal , ase_worldViewDir );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float2 appendResult33 = (float2(WorldPosition.x , WorldPosition.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
 				float2 appendResult32 = (float2(objToWorld31.x , objToWorld31.y));
@@ -2467,7 +2467,7 @@ Shader "ScanRim"
 				
 
 				float3 Normal = float3(0, 0, 1);
-				float Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				float Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				float AlphaClipThreshold = 0.5;
 				#ifdef ASE_DEPTH_WRITE_ON
 					float DepthValue = 0;
@@ -2892,12 +2892,12 @@ Shader "ScanRim"
 				WorldViewDirection = SafeNormalize( WorldViewDirection );
 
 				float2 uv_MainTex = IN.ase_texcoord8.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float dotResult14 = dot( WorldNormal , WorldViewDirection );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float4 lerpResult24 = lerp( _InnerColor , _RimColor , temp_output_27_0);
 				float2 appendResult33 = (float2(WorldPosition.x , WorldPosition.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
@@ -2917,7 +2917,7 @@ Shader "ScanRim"
 				float Metallic = 0;
 				float Smoothness = 0.5;
 				float Occlusion = 1;
-				float Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				float Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				float AlphaClipThreshold = 0.5;
 				float AlphaClipThresholdShadow = 0.5;
 				float3 BakedGI = 0;
@@ -3271,8 +3271,8 @@ Shader "ScanRim"
 				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
 
 				float2 uv_MainTex = IN.ase_texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float3 ase_worldNormal = IN.ase_texcoord1.xyz;
 				float3 ase_worldPos = IN.ase_texcoord2.xyz;
 				float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - ase_worldPos );
@@ -3280,7 +3280,7 @@ Shader "ScanRim"
 				float dotResult14 = dot( ase_worldNormal , ase_worldViewDir );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float2 appendResult33 = (float2(ase_worldPos.x , ase_worldPos.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
 				float2 appendResult32 = (float2(objToWorld31.x , objToWorld31.y));
@@ -3292,7 +3292,7 @@ Shader "ScanRim"
 				float4 tex2DNode28 = tex2D( _ScanTex, lerpResult42 );
 				
 
-				surfaceDescription.Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				surfaceDescription.Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				surfaceDescription.AlphaClipThreshold = 0.5;
 
 				#if _ALPHATEST_ON
@@ -3565,8 +3565,8 @@ Shader "ScanRim"
 				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
 
 				float2 uv_MainTex = IN.ase_texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-				float4 tex2DNode11 = tex2D( _MainTex, uv_MainTex );
 				float4 temp_cast_0 = (_MainTexBase).xxxx;
+				float4 temp_output_52_0 = pow( tex2D( _MainTex, uv_MainTex ) , temp_cast_0 );
 				float3 ase_worldNormal = IN.ase_texcoord1.xyz;
 				float3 ase_worldPos = IN.ase_texcoord2.xyz;
 				float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - ase_worldPos );
@@ -3574,7 +3574,7 @@ Shader "ScanRim"
 				float dotResult14 = dot( ase_worldNormal , ase_worldViewDir );
 				float clampResult15 = clamp( dotResult14 , 0.0 , 1.0 );
 				float smoothstepResult16 = smoothstep( _RimMin , _RimMax , ( _RimBase + ( 1.0 - clampResult15 ) ));
-				float4 temp_output_27_0 = saturate( ( pow( tex2DNode11 , temp_cast_0 ) + smoothstepResult16 ) );
+				float4 temp_output_27_0 = saturate( ( temp_output_52_0 + smoothstepResult16 ) );
 				float2 appendResult33 = (float2(ase_worldPos.x , ase_worldPos.y));
 				float3 objToWorld31 = mul( GetObjectToWorldMatrix(), float4( float3( 0,0,0 ), 1 ) ).xyz;
 				float2 appendResult32 = (float2(objToWorld31.x , objToWorld31.y));
@@ -3586,7 +3586,7 @@ Shader "ScanRim"
 				float4 tex2DNode28 = tex2D( _ScanTex, lerpResult42 );
 				
 
-				surfaceDescription.Alpha = ( temp_output_27_0 * tex2DNode28.a * _ScanColor.a ).r;
+				surfaceDescription.Alpha = ( temp_output_27_0.r * tex2DNode28.a * _ScanColor.a );
 				surfaceDescription.AlphaClipThreshold = 0.5;
 
 				#if _ALPHATEST_ON
@@ -3639,14 +3639,12 @@ Node;AmplifyShaderEditor.RangedFloatNode;22;-418.2433,68.92398;Inherit;False;Pro
 Node;AmplifyShaderEditor.RangedFloatNode;21;-527.3372,-164.6031;Inherit;False;Property;_RimBase;RimBase;2;0;Create;True;0;0;0;False;0;False;0.5144737;0;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;20;-193.8391,-110.8239;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;25;1.493225,-192.5509;Inherit;False;Property;_RimColor;RimColor;5;1;[HDR];Create;True;0;0;0;False;0;False;0,0.1834848,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SmoothstepOpNode;16;-74.60954,-13.69829;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SaturateNode;27;237.7384,45.98798;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.WorldPosInputsNode;30;-835.686,383.9179;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.TransformPositionNode;31;-893.7913,557.4703;Inherit;False;Object;World;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.DynamicAppendNode;33;-638.4818,451.7465;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.DynamicAppendNode;32;-656.8713,578.6216;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;40;491.9549,422.1783;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.SamplerNode;28;102.539,396.9577;Inherit;True;Property;_ScanTex;ScanTex;6;0;Create;True;0;0;0;False;0;False;-1;d50d4704bacac2344a7c57f9bb00661a;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;28;102.539,396.9577;Inherit;True;Property;_ScanTex;ScanTex;6;0;Create;True;0;0;0;False;0;False;-1;d50d4704bacac2344a7c57f9bb00661a;d50d4704bacac2344a7c57f9bb00661a;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;38;-328.5363,348.1798;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.SimpleSubtractOpNode;34;-503.0021,513.2153;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.RangedFloatNode;39;-699.3246,289.6262;Inherit;False;Property;_ScanTilling;ScanTilling;9;0;Create;True;0;0;0;False;0;False;1.78166;1.78166;0;3;0;1;FLOAT;0
@@ -3658,27 +3656,26 @@ Node;AmplifyShaderEditor.Vector2Node;44;-788.2589,1065.111;Inherit;False;Propert
 Node;AmplifyShaderEditor.PannerNode;45;-565.3016,902.3875;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;46;-820.4783,815.2657;Inherit;False;0;43;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;47;-255.0334,946.7434;Inherit;False;Property;_NoiseIntensity;NoiseIntensity;12;0;Create;True;0;0;0;False;0;False;0.1822281;0;0;1;0;1;FLOAT;0
-Node;AmplifyShaderEditor.SamplerNode;43;-394.5119,724.035;Inherit;True;Property;_NoiseTex;NoiseTex;11;0;Create;True;0;0;0;False;0;False;-1;351070468ddb3244395356271f1e40b4;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;48;662.1188,179.0815;Inherit;False;3;3;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SamplerNode;43;-394.5119,724.035;Inherit;True;Property;_NoiseTex;NoiseTex;11;0;Create;True;0;0;0;False;0;False;-1;351070468ddb3244395356271f1e40b4;351070468ddb3244395356271f1e40b4;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;26;9.880474,-378.0738;Inherit;False;Property;_InnerColor;InnerColor;4;1;[HDR];Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;2;1004.171,-312.4655;Float;False;True;-1;2;UnityEditor.ShaderGraphLitGUI;0;12;ScanRim;94348b07e5e8bab40bd6c8a1e3df54cd;True;Forward;0;1;Forward;19;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;2;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Transparent=RenderType;Queue=Transparent=Queue=0;UniversalMaterialType=Lit;True;3;True;12;all;0;False;True;1;5;False;;10;False;;1;1;False;;10;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=UniversalForward;False;False;0;;0;0;Standard;41;Workflow;1;0;Surface;1;638601944412565876;  Refraction Model;0;0;  Blend;0;0;Two Sided;1;0;Fragment Normal Space,InvertActionOnDeselection;0;0;Forward Only;0;0;Transmission;0;0;  Transmission Shadow;0.5,False,;0;Translucency;0;0;  Translucency Strength;1,False,;0;  Normal Distortion;0.5,False,;0;  Scattering;2,False,;0;  Direct;0.9,False,;0;  Ambient;0.1,False,;0;  Shadow;0.5,False,;0;Cast Shadows;1;0;  Use Shadow Threshold;0;0;Receive Shadows;1;0;GPU Instancing;1;0;LOD CrossFade;1;0;Built-in Fog;1;0;_FinalColorxAlpha;0;0;Meta Pass;1;0;Override Baked GI;0;0;Extra Pre Pass;0;0;DOTS Instancing;0;0;Tessellation;0;0;  Phong;0;0;  Strength;0.5,False,;0;  Type;0;0;  Tess;16,False,;0;  Min;10,False,;0;  Max;25,False,;0;  Edge Length;16,False,;0;  Max Displacement;25,False,;0;Write Depth;0;0;  Early Z;0;0;Vertex Position,InvertActionOnDeselection;1;0;Debug Display;0;0;Clear Coat;0;0;0;10;False;True;True;True;True;True;True;True;True;True;False;;False;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;23;643.8845,-165.1031;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.SamplerNode;11;-299.7138,-618.2128;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;49;111.5291,-551.8659;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.LerpOp;24;442.0057,-272.2185;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;51;274.318,-68.3403;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.PowerNode;52;134.7059,-644.9975;Inherit;False;False;2;0;COLOR;0,0,0,0;False;1;FLOAT;1;False;1;COLOR;0
-Node;AmplifyShaderEditor.RangedFloatNode;50;-225.7016,-428.1273;Inherit;False;Property;_MainTexBase;MainTexBase;13;0;Create;True;0;0;0;False;0;False;0;0;0;5;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SmoothstepOpNode;16;-71.90585,60.2029;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;48;905.4517,99.77294;Inherit;False;3;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;2;1426.849,-312.4656;Float;False;True;-1;2;UnityEditor.ShaderGraphLitGUI;0;12;ScanRim;94348b07e5e8bab40bd6c8a1e3df54cd;True;Forward;0;1;Forward;19;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;2;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Transparent=RenderType;Queue=Transparent=Queue=0;UniversalMaterialType=Lit;True;3;True;12;all;0;False;True;1;5;False;;10;False;;1;1;False;;10;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=UniversalForward;False;False;0;;0;0;Standard;41;Workflow;1;0;Surface;1;638601944412565876;  Refraction Model;0;0;  Blend;0;0;Two Sided;1;0;Fragment Normal Space,InvertActionOnDeselection;0;0;Forward Only;0;0;Transmission;0;0;  Transmission Shadow;0.5,False,;0;Translucency;0;0;  Translucency Strength;1,False,;0;  Normal Distortion;0.5,False,;0;  Scattering;2,False,;0;  Direct;0.9,False,;0;  Ambient;0.1,False,;0;  Shadow;0.5,False,;0;Cast Shadows;1;0;  Use Shadow Threshold;0;0;Receive Shadows;1;0;GPU Instancing;1;0;LOD CrossFade;1;0;Built-in Fog;1;0;_FinalColorxAlpha;0;0;Meta Pass;1;0;Override Baked GI;0;0;Extra Pre Pass;0;0;DOTS Instancing;0;0;Tessellation;0;0;  Phong;0;0;  Strength;0.5,False,;0;  Type;0;0;  Tess;16,False,;0;  Min;10,False,;0;  Max;25,False,;0;  Edge Length;16,False,;0;  Max Displacement;25,False,;0;Write Depth;0;0;  Early Z;0;0;Vertex Position,InvertActionOnDeselection;1;0;Debug Display;0;0;Clear Coat;0;0;0;10;False;True;True;True;True;True;True;True;True;True;False;;False;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;23;945.7972,-266.9424;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SamplerNode;11;-506.9974,-702.027;Inherit;True;Property;_MainTex;MainTex;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.LerpOp;24;486.1664,-291.1445;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SaturateNode;27;331.4669,85.64218;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;51;175.182,-10.6616;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.PowerNode;52;-141.9727,-704.4789;Inherit;False;False;2;0;COLOR;0,0,0,0;False;1;FLOAT;1;False;1;COLOR;0
+Node;AmplifyShaderEditor.BreakToComponentsNode;53;487.5475,170.7639;Inherit;False;COLOR;1;0;COLOR;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15
+Node;AmplifyShaderEditor.BreakToComponentsNode;54;45.04188,-682.7043;Inherit;True;COLOR;1;0;COLOR;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15
+Node;AmplifyShaderEditor.RangedFloatNode;50;-515.8982,-474.9915;Inherit;False;Property;_MainTexBase;MainTexBase;13;0;Create;True;0;0;0;False;0;False;0;0;0;5;0;1;FLOAT;0
 WireConnection;14;0;12;0
 WireConnection;14;1;13;0
 WireConnection;15;0;14;0
 WireConnection;19;0;15;0
 WireConnection;20;0;21;0
 WireConnection;20;1;19;0
-WireConnection;16;0;20;0
-WireConnection;16;1;22;0
-WireConnection;16;2;17;0
-WireConnection;27;0;51;0
 WireConnection;33;0;30;1
 WireConnection;33;1;30;2
 WireConnection;32;0;31;1
@@ -3698,21 +3695,25 @@ WireConnection;36;2;37;0
 WireConnection;45;0;46;0
 WireConnection;45;2;44;0
 WireConnection;43;1;45;0
-WireConnection;48;0;27;0
+WireConnection;16;0;20;0
+WireConnection;16;1;22;0
+WireConnection;16;2;17;0
+WireConnection;48;0;53;0
 WireConnection;48;1;28;4
 WireConnection;48;2;41;4
 WireConnection;2;2;23;0
 WireConnection;2;6;48;0
 WireConnection;23;0;24;0
 WireConnection;23;1;40;0
-WireConnection;49;0;11;0
-WireConnection;49;1;50;0
 WireConnection;24;0;26;0
 WireConnection;24;1;25;0
 WireConnection;24;2;27;0
+WireConnection;27;0;51;0
 WireConnection;51;0;52;0
 WireConnection;51;1;16;0
 WireConnection;52;0;11;0
 WireConnection;52;1;50;0
+WireConnection;53;0;27;0
+WireConnection;54;0;52;0
 ASEEND*/
-//CHKSM=19ED83492499D9C1DF51DDCF09ACC5516B5ACCE5
+//CHKSM=B7C03B690B278BE8347199380EE772F11434F1C2
