@@ -13,7 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -23,6 +23,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlbedoTex:
+        m_Texture: {fileID: 2800000, guid: 812d4dd5fe95b6c4a9610d75f22c7f7b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: dc824d4065c2c8c4c9cab86675d44c0c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 016e2eb666d88f046ba69fc74e57b6e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -37,17 +53,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AddNormalScale: 0.24
     - _AlphaCutoff: 0.5
-    - _Clip: 1.23
+    - _Clip: 0
+    - _Cutoff: 0.5
     - _EnvironmentReflections: 1
-    - _Float1: -18.97
+    - _Float1: -29.86
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SmMax: 1.1
+    - _SmMax: 0.81
     - _SmMin: 0
     - _SpecularHighlights: 1
     - _VertexWidth: 0.1
+    - __dirty: 0
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 1.1694394, g: 4.423223, b: 0.9875746, a: 0}
+    - _MainColor1: {r: 18.164822, g: 17.214643, b: 0, a: 0}
+    - _MainColor2: {r: 0.7338587, g: 6.567773, b: 7.37721, a: 0}
+    - _MainLit: {r: 3.482202, g: 3.482202, b: 3.482202, a: 0}
   m_BuildTextureStacks: []
