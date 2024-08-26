@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ScanRim
-  m_Shader: {fileID: 4800000, guid: 72f697d3010114f49a2425cfb043f0ff, type: 3}
+  m_Name: ViceGrow
+  m_Shader: {fileID: 4800000, guid: eec644d30644cda448977490eea31408, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,18 +23,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dc916aa8b3b1a6b4d8606e57a9cd77b0, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 351070468ddb3244395356271f1e40b4, type: 3}
-        m_Scale: {x: 1.97, y: 1.7}
-        m_Offset: {x: 0, y: 0}
-    - _ScanTex:
-        m_Texture: {fileID: 2800000, guid: d50d4704bacac2344a7c57f9bb00661a, type: 3}
-        m_Scale: {x: 0.54, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -54,22 +42,17 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
+    - _Clip: 0.3
     - _EnvironmentReflections: 1
-    - _MainTexBase: 0.38
-    - _NoiseIntensity: 0.43
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimBase: 0.185
-    - _RimMax: 0.76
-    - _RimMin: 0.18
-    - _ScanTilling: 0.05
+    - _SmMax: 1.13
+    - _SmMin: 0.61
     - _SpecularHighlights: 1
+    - _VertexWidth: 1.6
+    - __dirty: 0
+    - _pow: 0.3
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _InnerColor: {r: 6.4222345, g: 0.666433, b: 0.26899424, a: 0}
-    - _RimColor: {r: 1.3041189, g: 0.51124007, b: 0, a: 0.74509805}
-    - _ScanColor: {r: 20.865906, g: 7.9179726, b: 0, a: 0.8509804}
-    - _ScanSpeed: {r: 0, g: 0.5, b: 0, a: 0}
-    - _ScanSpeed1: {r: 0.3, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []

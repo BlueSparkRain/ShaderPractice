@@ -3,7 +3,17 @@ guid: be9b14700fab07548953aee8b198c679
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roots_m
+    second: {fileID: 2100000, guid: de303de3708ff9f41adadcec36689784, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vine_m
+    second: {fileID: 2100000, guid: 661fe7e9fd27fe2449b4ab3d77921474, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
