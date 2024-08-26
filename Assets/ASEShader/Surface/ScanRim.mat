@@ -55,21 +55,21 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _EnvironmentReflections: 1
-    - _MainTexBase: 3.53
-    - _NoiseIntensity: 0.126
+    - _MainTexBase: 0.38
+    - _NoiseIntensity: 0.43
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimBase: 0.349
     - _RimMax: 1.15
     - _RimMin: 0.116
-    - _ScanTilling: 0.39
+    - _ScanTilling: 0.12
     - _SpecularHighlights: 1
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _InnerColor: {r: 0, g: 0.1511481, b: 22.363522, a: 0}
-    - _RimColor: {r: 1.1708878, g: 0.67583627, b: 0, a: 0}
-    - _ScanColor: {r: 22.363522, g: 2.8256855, b: 0, a: 0.8509804}
+    - _InnerColor: {r: 4.5947943, g: 1.3594571, b: 0, a: 0}
+    - _RimColor: {r: 1.6037008, g: 0.08396339, b: 0, a: 0.74509805}
+    - _ScanColor: {r: 0.63747835, g: 1.8278286, b: 0.5230575, a: 0.8509804}
     - _ScanSpeed: {r: 0, g: 0.5, b: 0, a: 0}
-    - _ScanSpeed1: {r: 0.5, g: 1, b: 0, a: 0}
+    - _ScanSpeed1: {r: 0.1, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
