@@ -351,11 +351,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 582694ac93c3fe347880f385c7c74820, type: 3}
-  EdgeColor: {r: 1, g: 0.29874206, b: 0.29874206, a: 0}
-  BackGroundColor: {r: 1, g: 0.57194644, b: 0.03459108, a: 0}
-  EdgeWidth: 0.51
-  ColorHDR: 2.6
-  BackGroundExtend: 1
+  EdgeColor: {r: 0.2980392, g: 0.50071144, b: 1, a: 0}
+  BackGroundColor: {r: 0.8553459, g: 0.47635117, b: 0, a: 0.8627451}
+  EdgeWidth: 1.21
+  ColorHDR: 3.7
+  BackGroundExtend: 0.09
 --- !u!1001 &845116969
 PrefabInstance:
   m_ObjectHideFlags: 0

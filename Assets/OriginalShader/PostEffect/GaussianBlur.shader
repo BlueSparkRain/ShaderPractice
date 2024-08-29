@@ -60,7 +60,7 @@ Shader "Unlit/GaussianBlur"
            fixed4 fragBlur(v2f i): SV_TARGET
            {
            //卷积运算，卷积核其中按照偏移位数，只有3个数
-           float weight[3]={0,4026,0.2442,0.0545};
+           float weight[3]={0.4026,0.2442,0.0545};
            //先计算当前像素点
            fixed3 sum = tex2D(_MainTex,i.uv[0]).rgb* weight[0];
 
@@ -78,10 +78,9 @@ Shader "Unlit/GaussianBlur"
             sum += tex2D(_MainTex,i.uv[it*2]).rgb * weight[it];
            }
 
-           return fixed(sum,1);
+           return fixed4(sum,1);
 
-
-       }
+           }
 
         ENDCG
 
