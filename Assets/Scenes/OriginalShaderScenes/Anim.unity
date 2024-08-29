@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 841142001}
   - component: {fileID: 841142004}
   - component: {fileID: 841142005}
+  - component: {fileID: 841142006}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -356,6 +357,20 @@ MonoBehaviour:
   EdgeWidth: 1.21
   ColorHDR: 3.7
   BackGroundExtend: 0.09
+--- !u!114 &841142006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841142000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8131b237fa22ba54f9d54ded26306ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: c1dee78a92e906d4eb9950b08ab47848, type: 3}
+  downSample: 3
 --- !u!1001 &845116969
 PrefabInstance:
   m_ObjectHideFlags: 0
