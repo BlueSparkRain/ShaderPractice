@@ -239,6 +239,8 @@ GameObject:
   - component: {fileID: 841142003}
   - component: {fileID: 841142002}
   - component: {fileID: 841142001}
+  - component: {fileID: 841142004}
+  - component: {fileID: 841142005}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -320,6 +322,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841142004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841142000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4647e91ca5758d74486ab77999dfb505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: f082774506fe1de49b2815f7cb510053, type: 3}
+  Brightness: 1.02
+  Saturation: 0.98
+  Contrast: 1
+--- !u!114 &841142005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841142000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd717691fe77e0f4aba5d2cf6a884f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 582694ac93c3fe347880f385c7c74820, type: 3}
+  EdgeColor: {r: 1, g: 0.29874206, b: 0.29874206, a: 0}
+  BackGroundColor: {r: 1, g: 0.57194644, b: 0.03459108, a: 0}
+  EdgeWidth: 0.51
+  ColorHDR: 2.6
+  BackGroundExtend: 1
 --- !u!1001 &845116969
 PrefabInstance:
   m_ObjectHideFlags: 0
