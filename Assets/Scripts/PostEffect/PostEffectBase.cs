@@ -13,11 +13,19 @@ public class PostEffectBase : MonoBehaviour
 
     protected virtual void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
+        //进行渲染之前 先更新属性，在子类中重写即可
+        UpdateProperty();
         //判断这个材质球是否为空 如果不为空 就证明这个shader能用来处理屏幕后处理效果
         if (material != null)
             Graphics.Blit(source, destination, material);
         else//如果为空 就不用处理后处理效果了 直接显示原画面就可以了
             Graphics.Blit(source, destination);
+    }
+    /// <summary>
+    /// 更新材质球属性
+    /// </summary>
+    protected virtual void UpdateProperty() 
+    {
     }
 
     protected Material material
