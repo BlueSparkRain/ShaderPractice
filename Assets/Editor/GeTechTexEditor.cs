@@ -20,4 +20,5 @@ public class GeTechTexEditor :Editor
             targetComponent.CreatRectTechTex();
         }
     }
+    
 }
