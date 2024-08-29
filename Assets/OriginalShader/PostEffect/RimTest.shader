@@ -3,7 +3,17 @@ Shader "Unlit/RimTest"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        //描边颜色
         _EdgeColor("EdgeColor",COLOR)=(0,0,0,0)
+        //描边宽度（梯度差距）
+        _EdgeWidth("EdgeWidth",Range(0,6))=1
+        //描边亮度
+        _ColorHDR("ColorHDR",Range(0,10))=1
+        //背景颜色彩度
+        _BackGroundExtend("_BackGroundExtend",Range(0,1))=0
+        //背景颜色
+        _BackGroundColor("_BackGroundColor",COLOR)=(1,1,1,1)
+        
     }
     SubShader
     {
@@ -29,6 +39,10 @@ Shader "Unlit/RimTest"
             float4 _MainTex_ST;
             float4 _MainTex_TexelSize;
             float4 _EdgeColor;
+            float _EdgeWidth;
+            float _ColorHDR;
+            fixed _BackGroundExtend;
+            fixed4 _BackGroundColor;
             v2f vert (appdata_base v)
             {
                 v2f o;
@@ -49,7 +63,7 @@ Shader "Unlit/RimTest"
             //计算像素颜色的灰度值
             fixed calcLuminance(fixed4 color)
             {
-            return 0.2126*color.r+0.7152*color.g+0.722*color.b;
+            return 0.2126*color.r+0.7152*color.g+0.0722*color.b;
             }
 
             //Sobel算子相关的卷积计算
@@ -70,7 +84,7 @@ Shader "Unlit/RimTest"
              for (int i = 0; i < 9; i++)
              {
                //采样颜色后 计算灰度值并记录
-               L = calcLuminance(tex2D( _MainTex,o.uv[i]));
+               L =  calcLuminance(tex2D( _MainTex,o.uv[i])) * _EdgeWidth;
                edgeX+=L * Gx[i];
                edgeY+=L * Gy[i];
              }
@@ -80,10 +94,14 @@ Shader "Unlit/RimTest"
             }
             fixed4 frag (v2f i) : SV_Target
             {
-                //计算梯度值
+              //计算梯度值
               half edge= Sobel(i);
-             fixed4 color =lerp(tex2D(_MainTex,i.uv[4]),_EdgeColor,edge);
-             return color;
+              //原图上描边
+             fixed4 edgeColor =lerp(tex2D(_MainTex,i.uv[4]),_EdgeColor* _ColorHDR,edge);
+             //纯色上描边
+             fixed4 onlyEdgeColor= lerp(_BackGroundColor,_EdgeColor* _ColorHDR,edge);
+             //原色or纯色
+             return lerp(edgeColor,onlyEdgeColor, _BackGroundExtend);
             }
 
 
