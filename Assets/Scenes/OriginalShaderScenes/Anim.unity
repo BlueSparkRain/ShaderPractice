@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: c1dee78a92e906d4eb9950b08ab47848, type: 3}
-  downSample: 3
+  downSample: 4
 --- !u!1001 &845116969
 PrefabInstance:
   m_ObjectHideFlags: 0
